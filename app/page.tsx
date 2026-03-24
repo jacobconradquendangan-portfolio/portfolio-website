@@ -34,7 +34,7 @@ const projects = [
   },
   {
     title: "Aegis Verification Platform (AVP)",
-    desc: "2nd Place Hackathon. Next.js/Firebase authentidcation and verification system.",
+    desc: "2nd Place Hackathon. Next.js/Firebase authentication and verification system.",
     tech: "Next.js • Firebase • Authentication",
     github:
       "https://github.com/jacobconradquendangan-portfolio/My-Portfolio/tree/main/01_Industry_Wins_Awards/Institutional_Hackathon",
@@ -132,6 +132,23 @@ const projects = [
       "https://github.com/jacobconradquendangan-portfolio/My-Portfolio/tree/main/03_Data_Analytics_Dashboards/Wine_Quality_Data_Mining",
     live: "#",
     category: "Data Analytics",
+  },
+];
+
+const certifications = [
+  {
+    title: "HubSpot Certifications",
+    desc: "Professional certifications in inbound marketing, sales, and customer service.",
+    folderPath: "/Credentials_Leadership/HubSpot_Certs",
+    github:
+      "https://github.com/jacobconradquendangan-portfolio/My-Portfolio/tree/main/04_Credentials_Leadership/HubSpot_Certs",
+  },
+  {
+    title: "Leadership Portfolio",
+    desc: "Proof of Tech Lead roles and institutional speaking engagements.",
+    folderPath: "/Leadership_Speaking",
+    github:
+      "https://github.com/jacobconradquendangan-portfolio/My-Portfolio/tree/main/04_Credentials_Leadership/Leadership_Speaking",
   },
 ];
 
@@ -356,6 +373,69 @@ export default function Page() {
               />
             </svg>
           </a>
+        </div>
+      </section>
+
+      {/* CERTIFICATIONS & LEADERSHIP */}
+      <section className="py-20">
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          className="text-3xl font-bold mb-6 text-gray-100"
+        >
+          Certifications & Leadership
+        </motion.h2>
+
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.1 }}
+          className="text-gray-400 mb-8 max-w-2xl"
+        >
+          Professional certifications and leadership roles demonstrating my
+          commitment to growth and excellence.
+        </motion.p>
+
+        <div className="grid md:grid-cols-2 gap-6">
+          {certifications.map((cert, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: i * 0.1 }}
+              whileHover={{ y: -5 }}
+              className="group relative bg-[#1a1a1a] rounded-xl overflow-hidden border border-gray-700 hover:border-gray-500 hover:shadow-xl transition-all duration-300"
+            >
+              <div className="p-6">
+                <span className="inline-block text-xs text-gray-500 font-mono mb-2">
+                  {cert.folderPath}
+                </span>
+                <h3 className="text-xl font-semibold mb-2 text-gray-100 group-hover:text-gray-300 transition">
+                  {cert.title}
+                </h3>
+                <p className="text-gray-400 text-sm leading-relaxed mb-4">
+                  {cert.desc}
+                </p>
+                <div className="flex gap-4 pt-3 border-t border-gray-700">
+                  <a
+                    href={cert.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm text-gray-400 hover:text-gray-200 transition flex items-center gap-2"
+                  >
+                    <svg
+                      className="w-4 h-4"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.108-.775.418-1.305.762-1.604-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                    </svg>
+                    View Credentials
+                  </a>
+                </div>
+              </div>
+            </motion.div>
+          ))}
         </div>
       </section>
 
