@@ -78,6 +78,16 @@ const projects = [
     live: "#",
     category: "System Architecture",
   },
+
+  {
+    title: "Software Testing & Selenium Automation",
+    desc: "A hybrid Quality Engineering suite featuring 20 automated test cases and comprehensive manual documentation.",
+    tech: "Selenium WebDriver • Node.js • Quality Assurance",
+    github:
+      "https://github.com/jacobconradquendangan-portfolio/My-Portfolio/tree/main/02_Systems_Architecture_Dev/Fundamentals_Software_Testing_Selenium",
+    live: "#",
+    category: "System Architecture",
+  },
   // Track 03: Data Analytics & Dashboards
   {
     title: "Airline Regression",
